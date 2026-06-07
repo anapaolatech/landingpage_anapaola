@@ -240,6 +240,46 @@
   }
   .testi-author { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; letter-spacing: 0.04em; }
 
+  /* NEWSLETTER */
+  .newsletter {
+    background: var(--navy-mid);
+    border-top: 1px solid rgba(201,148,58,0.12);
+    border-bottom: 1px solid rgba(201,148,58,0.12);
+  }
+  .newsletter-inner {
+    max-width: 680px; margin: 0 auto; text-align: center;
+  }
+  .newsletter-icon {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 52px; height: 52px; border-radius: 50%;
+    background: rgba(201,148,58,0.1);
+    border: 1px solid rgba(201,148,58,0.25);
+    font-size: 1.4rem; margin-bottom: 1.5rem;
+  }
+  .newsletter-inner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: var(--white); margin-bottom: 1rem; line-height: 1.3;
+  }
+  .newsletter-inner h2 em { color: var(--gold-light); font-style: italic; }
+  .newsletter-desc {
+    color: var(--text-light); font-size: 1rem; font-weight: 300;
+    max-width: 500px; margin: 0 auto 2rem; line-height: 1.75;
+  }
+  .newsletter-btn {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: var(--gold); color: var(--navy);
+    padding: 0.85rem 2rem; border-radius: 4px;
+    font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 0.95rem;
+    text-decoration: none; letter-spacing: 0.02em;
+    transition: background 0.2s;
+  }
+  .newsletter-btn:hover { background: var(--gold-light); }
+  .newsletter-note {
+    margin-top: 1rem; font-size: 0.78rem;
+    color: var(--text-muted); letter-spacing: 0.02em;
+  }
+
   /* CAPTURE */
   .capture { background: var(--navy-light); }
   .capture-inner {
@@ -547,6 +587,20 @@
   </div>
 </section>
 
+<!-- NEWSLETTER -->
+<section class="newsletter" id="newsletter">
+  <div class="newsletter-inner">
+    <div class="newsletter-icon reveal">✉</div>
+    <div class="section-label reveal">Newsletter</div>
+    <h2 class="reveal">A Letter From My Table<br><em>to Yours</em></h2>
+    <p class="newsletter-desc reveal">Real talk on life insurance, money, and protecting your family — written from my home to yours. No jargon, no sales pitch. Just honest guidance you can actually use.</p>
+    <a href="https://anapaolabiz.beehiiv.com/subscribe" target="_blank" class="newsletter-btn reveal">
+      ✉ &nbsp;Subscribe — it's free
+    </a>
+    <p class="newsletter-note reveal">Join readers getting clarity on protecting what matters most.</p>
+  </div>
+</section>
+
 <!-- CAPTURE -->
 <section class="capture" id="contact">
   <div class="capture-inner">
@@ -573,6 +627,7 @@
     <a href="#why">About</a>
     <a href="#how">How it works</a>
     <a href="#stories">Stories</a>
+    <a href="#newsletter">Newsletter</a>
     <a href="#contact">Contact</a>
   </div>
   <div class="footer-copy">© 2025 Ana Paola Martinez · Licensed Advisor at <a href="https://www.deleanosfinancial.com" target="_blank" style="color:var(--gold); text-decoration:none;">DeLeanos Financial Corp</a></div>
