@@ -240,6 +240,46 @@
   }
   .testi-author { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; letter-spacing: 0.04em; }
 
+  /* NEWSLETTER */
+  .newsletter {
+    background: var(--navy-mid);
+    border-top: 1px solid rgba(201,148,58,0.12);
+    border-bottom: 1px solid rgba(201,148,58,0.12);
+  }
+  .newsletter-inner {
+    max-width: 680px; margin: 0 auto; text-align: center;
+  }
+  .newsletter-icon {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 52px; height: 52px; border-radius: 50%;
+    background: rgba(201,148,58,0.1);
+    border: 1px solid rgba(201,148,58,0.25);
+    font-size: 1.4rem; margin-bottom: 1.5rem;
+  }
+  .newsletter-inner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: var(--white); margin-bottom: 1rem; line-height: 1.3;
+  }
+  .newsletter-inner h2 em { color: var(--gold-light); font-style: italic; }
+  .newsletter-desc {
+    color: var(--text-light); font-size: 1rem; font-weight: 300;
+    max-width: 500px; margin: 0 auto 2rem; line-height: 1.75;
+  }
+  .newsletter-btn {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: var(--gold); color: var(--navy);
+    padding: 0.85rem 2rem; border-radius: 4px;
+    font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 0.95rem;
+    text-decoration: none; letter-spacing: 0.02em;
+    transition: background 0.2s;
+  }
+  .newsletter-btn:hover { background: var(--gold-light); }
+  .newsletter-note {
+    margin-top: 1rem; font-size: 0.78rem;
+    color: var(--text-muted); letter-spacing: 0.02em;
+  }
+
   /* CAPTURE */
   .capture { background: var(--navy-light); }
   .capture-inner {
@@ -352,10 +392,6 @@
     <h1>Protegiendo tu futuro,<br><em>asegurando tu legado.</em></h1>
     <p class="hero-sub">Como asesora licenciada de DeLeanos Financial Corp, estoy aquí para simplificar el proceso de encontrar el seguro de vida y plan de jubilación adecuado para tu familia — con orientación personalizada en cada paso del camino.</p>
     <div class="hero-actions">
-      <div style="display:flex; flex-direction:column; gap:0.75rem;">
-        <a href="#contact" class="btn-primary">Agenda tu consulta gratuita</a>
-        <a href="https://calendar.app.google/5qasfgVDb7HBfRBJ8" target="_blank" class="btn-virtual">📹 Reunión virtual</a>
-      </div>
       <a href="#how" class="btn-ghost">Ver cómo funciona</a>
     </div>
     <div class="hero-trust">
@@ -519,6 +555,23 @@
   </div>
 </section>
 
+<!-- NEWSLETTER -->
+<section class="newsletter" id="newsletter">
+  <div class="newsletter-inner">
+    <div class="newsletter-icon reveal">✉</div>
+    <div class="section-label reveal">Newsletter</div>
+    <h2 class="reveal">Una Carta De Mi Mesa<br><em>a la Tuya</em></h2>
+    <p class="newsletter-desc reveal">Has construido una vida hermosa. Protejámosla.</p>
+    <p class="newsletter-desc reveal" style="margin-top:-0.75rem;">Las personas que amas. La vida que has construido. Los sueños en los que estás trabajando con todo el corazón.</p>
+    <p class="newsletter-desc reveal" style="margin-top:-0.75rem;">Aquí hablamos de todo eso con honestidad: seguros de vida, legado y una pequeña comunidad. Escrito como una carta de mi hogar al tuyo. Porque la claridad es un acto de amor.</p>
+    <p class="newsletter-desc reveal" style="margin-top:-0.75rem; color: var(--gold-light); font-style: italic; font-family: 'Playfair Display', serif;">Ven a sentarte a la mesa. Te guardé un lugar.<br>— Ana</p>
+    <a href="https://anapaolabiz.beehiiv.com/subscribe" target="_blank" class="newsletter-btn reveal">
+      ✉ &nbsp;Suscríbete — es gratis
+    </a>
+    <p class="newsletter-note reveal">Únete a los lectores que están tomando el control de lo que más importa.</p>
+  </div>
+</section>
+
 <!-- TESTIMONIALS -->
 <section class="social" id="stories">
   <div class="social-inner">
@@ -531,17 +584,17 @@
       <div class="testi-card reveal reveal-delay-1">
         <div class="testi-stars">★★★★★</div>
         <div class="testi-quote">"Nunca imaginé que mi póliza podría pagarme mientras sigo con vida. Ana explicó los beneficios en vida de una manera que por fin tuvo sentido — y confirmamos nuestro plan esa misma semana."</div>
-        <div class="testi-author">— M.R., Chicago IL · Familia de 4</div>
+        <div class="testi-author">— Y.V., Chicago IL</div>
       </div>
       <div class="testi-card reveal reveal-delay-2">
         <div class="testi-stars">★★★★★</div>
         <div class="testi-quote">"Como dueño de un pequeño negocio siempre lo posponía. Ana lo hizo simple y se encargó de todo. Por fin siento que mi familia y mi negocio están protegidos."</div>
-        <div class="testi-author">— R.N., Lake in the Hills IL · Dueño de negocio</div>
+        <div class="testi-author">— R.S., Rockford IL · Dueño de negocio</div>
       </div>
       <div class="testi-card reveal reveal-delay-3">
         <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote">"Comparó múltiples aseguradoras y nos encontró una póliza con mejor cobertura a un precio menor del que me habían cotizado antes. Ojalá hubiera llamado antes."</div>
-        <div class="testi-author">— S.V., Oak Park IL · Comprador por primera vez</div>
+        <div class="testi-quote">"Quería agradecerte por toda tu ayuda con mi nueva póliza. Aprecio mucho cómo explicaste cada detalle y tomaste el tiempo de responder todas mis preguntas. Hiciste que un proceso que se sentía abrumador fuera mucho más fácil. ¡Eres la mejor!"</div>
+        <div class="testi-author">— Maria</div>
       </div>
     </div>
   </div>
@@ -560,18 +613,19 @@
       <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="btn-primary" style="text-align:center;">Agenda mi consulta gratuita</a>
       <a href="https://calendar.app.google/5qasfgVDb7HBfRBJ8" target="_blank" class="btn-virtual-outline">📹 ¿Prefieres una reunión virtual? Reserva aquí</a>
     </div>
-      <a href="tel:+18722252817" class="btn-virtual-outline">📱 Or just text or call me: (872) 225-2817</a>
-    <p class="form-disclaimer reveal">Sin spam. Me comunicaré contigo en 24 horas para agendar a la hora que mejor te funcione.</p>
+      <a href="tel:+18722252817" class="btn-virtual-outline">📱 O simplemente escríbeme o llámame: (872) 225-2817</a>
+    <p class="form-disclaimer reveal">Me comunicaré contigo en 24 horas para agendar a la hora que mejor te funcione.</p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Ana Paola Martinez</div>
-  <div class="footer-sub">Asesora de Seguros de Vida y Jubilación · DeLeanos Financial Corp · Atendiendo a familias de Illinois</div>
+  <div class="footer-sub">Asesora de Seguros de Vida y Jubilación · DeLeanos Financial Corp</div>
   <div class="footer-links">
     <a href="#why">Sobre mí</a>
     <a href="#how">Cómo funciona</a>
+    <a href="#newsletter">Newsletter</a>
     <a href="#stories">Testimonios</a>
     <a href="#contact">Contacto</a>
   </div>
