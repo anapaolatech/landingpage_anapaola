@@ -769,5 +769,25 @@
   updateCountdown();
   setInterval(updateCountdown, 1000);
 </script>
+<script>
+  // GA4 event tracking for key CTAs
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if(!a) return;
+    var href = a.getAttribute('href') || '';
+    var ev = null, params = {};
+    if(href.indexOf('calendar.app.google/U1FrX6y3fZrXvNGF8') > -1){ ev='book_consultation'; params.method='in_person'; }
+    else if(href.indexOf('calendar.app.google/5qasfgVDb7HBfRBJ8') > -1){ ev='book_consultation'; params.method='virtual'; }
+    else if(href.indexOf('beehiiv.com') > -1){ ev='newsletter_subscribe'; }
+    else if(href.indexOf('deleanos-workshop') > -1){ ev='workshop_reserve'; }
+    else if(href.indexOf('financial-protection-map') > -1 || href.indexOf('mapa-financiero-anapaola') > -1){ ev='explore_map'; }
+    else if(href.indexOf('tel:') === 0){ ev='click_phone'; }
+    if(ev && typeof gtag === 'function'){
+      params.link_url = href;
+      params.page_language = document.documentElement.lang;
+      gtag('event', ev, params);
+    }
+  });
+</script>
 </body>
 </html>
