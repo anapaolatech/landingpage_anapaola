@@ -517,8 +517,6 @@
     <a href="#services">Servicios</a>
     <a href="#how">Cómo funciona</a>
     <a href="#stories">Testimonios</a>
-    <a href="#contact" class="nav-cta">Reservar llamada</a>
-    <a href="https://calendar.app.google/5qasfgVDb7HBfRBJ8" target="_blank" class="nav-cta-virtual">📹 Reunión virtual</a>
     <a href="index.html" class="lang-toggle" aria-label="Switch to English" style="font-size:0.7rem;">English</a>
   </div>
 </nav>
@@ -622,15 +620,10 @@
         <h4 style="font-family:'Playfair Display',serif; font-size:1.02rem; color:var(--white); margin:0 0 0.4rem;">Acceso cuando quieras</h4>
         <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.65; margin:0;">Toma prestado de tu valor en efectivo cuando lo necesites — sin límite de edad, sin penalidad del IRS.</p>
       </div>
-      <div class="reveal" style="background:var(--navy-mid); border:1px solid rgba(201,148,58,0.2); border-radius:10px; padding:1.5rem; border-left:4px solid var(--gold);">
-        <div style="font-size:1.5rem; margin-bottom:0.5rem; line-height:1;">⏰</div>
-        <h4 style="font-family:'Playfair Display',serif; font-size:1.02rem; color:var(--white); margin:0 0 0.4rem;">Sin retiros obligatorios</h4>
-        <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.65; margin:0;">Sin retiros mínimos obligatorios — tú decides cuándo y cuánto usar.</p>
-      </div>
     </div>
     <div class="reveal" style="text-align:center; margin-top:2rem;">
       <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="newsletter-btn">Agenda tu consulta gratis hoy →</a>
-      <div style="margin-top:0.9rem;"><a href="https://mapa-financiero-anapaola.vercel.app" target="_blank" style="color:var(--gold-light); font-size:0.875rem; text-decoration:none;">🗺️ O explora el mapa interactivo →</a></div>
+      <div style="margin-top:0.9rem;"><a href="https://mapa-financiero-anapaola.vercel.app" target="_blank" style="color:var(--gold-light); font-size:0.875rem; text-decoration:none;">¿Quieres más detalles? Esto es lo que cubre la póliza →</a></div>
     </div>
   </div>
 </section>
@@ -813,13 +806,7 @@
         <button type="submit" class="btn-primary" style="border:none; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:0.95rem; padding:0.85rem 2rem; border-radius:4px;">Ver mis opciones →</button>
       </div>
     </form>
-    <p class="form-disclaimer reveal" style="margin-bottom:1.5rem;">O salta el formulario:</p>
-    <div class="form-row reveal">
-      <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="btn-primary" style="text-align:center;">📍 Agenda una consulta en persona gratis</a>
-      <a href="https://calendar.app.google/5qasfgVDb7HBfRBJ8" target="_blank" class="btn-virtual-outline">📹 ¿Prefieres virtual? Agenda una videollamada</a>
-    </div>
       <a href="tel:+18722252817" class="btn-virtual-outline">📱 Escríbeme o llámame: (872) 225-2817</a>
-    <p class="form-disclaimer reveal">Sin formularios, sin presión. Te encuentro donde estés.</p>
   </div>
 </section>
 
@@ -892,6 +879,19 @@
     var th = document.getElementById('lead-thanks');
     if (th) { th.style.display = 'block'; if (lf) lf.style.display = 'none'; }
   }
+// Nav avatar: reuse hero portrait as small circle
+  (function(){
+    var hp = document.querySelector('.hero-photo img');
+    var logo = document.querySelector('.nav-logo');
+    if (hp && logo) {
+      var av = document.createElement('img');
+      av.src = hp.src; av.alt = 'Ana Paola Martinez';
+      av.style.cssText = 'width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:top center;border:1px solid rgba(201,148,58,0.55);margin-right:9px;flex:0 0 auto;';
+      logo.style.display = 'inline-flex';
+      logo.style.alignItems = 'center';
+      logo.insertBefore(av, logo.firstChild);
+    }
+  })();
 </script>
 <div class="mobile-cta-bar">
   <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="mcta-primary">📅 Agenda una llamada</a>

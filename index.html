@@ -517,8 +517,6 @@
     <a href="#services">Services</a>
     <a href="#how">How it works</a>
     <a href="#stories">Stories</a>
-    <a href="#contact" class="nav-cta">Book a call</a>
-    <a href="https://calendar.app.google/5qasfgVDb7HBfRBJ8" target="_blank" class="nav-cta-virtual">📹 Virtual meeting</a>
     <a href="es.html" class="lang-toggle" aria-label="Cambiar a español" style="font-size:0.7rem;">Español</a>
   </div>
 </nav>
@@ -669,15 +667,10 @@
         <h4 style="font-family:'Playfair Display',serif; font-size:1.02rem; color:var(--white); margin:0 0 0.4rem;">Access anytime</h4>
         <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.65; margin:0;">Borrow from your cash value whenever you need — no age limit, no IRS penalty.</p>
       </div>
-      <div class="reveal" style="background:var(--navy-mid); border:1px solid rgba(201,148,58,0.2); border-radius:10px; padding:1.5rem; border-left:4px solid var(--gold);">
-        <div style="font-size:1.5rem; margin-bottom:0.5rem; line-height:1;">⏰</div>
-        <h4 style="font-family:'Playfair Display',serif; font-size:1.02rem; color:var(--white); margin:0 0 0.4rem;">No RMDs, ever</h4>
-        <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.65; margin:0;">No required minimum distributions — you decide when and how much to use.</p>
-      </div>
     </div>
     <div class="reveal" style="text-align:center; margin-top:2rem;">
       <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="newsletter-btn">Schedule your free consultation today →</a>
-      <div style="margin-top:0.9rem;"><a href="https://financial-protection-map.vercel.app" target="_blank" style="color:var(--gold-light); font-size:0.875rem; text-decoration:none;">🗺️ Or explore the interactive map →</a></div>
+      <div style="margin-top:0.9rem;"><a href="https://financial-protection-map.vercel.app" target="_blank" style="color:var(--gold-light); font-size:0.875rem; text-decoration:none;">Want more details? Here's what the policy covers →</a></div>
     </div>
   </div>
 </section>
@@ -860,13 +853,7 @@
         <button type="submit" class="btn-primary" style="border:none; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:0.95rem; padding:0.85rem 2rem; border-radius:4px;">Get my options →</button>
       </div>
     </form>
-    <p class="form-disclaimer reveal" style="margin-bottom:1.5rem;">Or skip the form:</p>
-    <div class="form-row reveal">
-      <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="btn-primary" style="text-align:center;">📍 Book a free in-person consultation</a>
-      <a href="https://calendar.app.google/5qasfgVDb7HBfRBJ8" target="_blank" class="btn-virtual-outline">📹 Prefer virtual? Book a video call</a>
-    </div>
       <a href="tel:+18722252817" class="btn-virtual-outline">📱 Text or call me: (872) 225-2817</a>
-    <p class="form-disclaimer reveal">No forms, no pressure. I'll meet you where you are.</p>
   </div>
 </section>
 
@@ -939,6 +926,19 @@
     var th = document.getElementById('lead-thanks');
     if (th) { th.style.display = 'block'; if (lf) lf.style.display = 'none'; }
   }
+// Nav avatar: reuse hero portrait as small circle
+  (function(){
+    var hp = document.querySelector('.hero-photo img');
+    var logo = document.querySelector('.nav-logo');
+    if (hp && logo) {
+      var av = document.createElement('img');
+      av.src = hp.src; av.alt = 'Ana Paola Martinez';
+      av.style.cssText = 'width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:top center;border:1px solid rgba(201,148,58,0.55);margin-right:9px;flex:0 0 auto;';
+      logo.style.display = 'inline-flex';
+      logo.style.alignItems = 'center';
+      logo.insertBefore(av, logo.firstChild);
+    }
+  })();
 </script>
 <div class="mobile-cta-bar">
   <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="mcta-primary">📅 Book a free call</a>
