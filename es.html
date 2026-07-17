@@ -350,6 +350,57 @@
     .workshop-btn { width: 100%; justify-content: center; }
   }
 
+  /* MOBILE REFRESH: hero CTA, sticky bar, FAQ */
+  .hero-cta {
+    display: inline-block; background: var(--gold); color: var(--navy);
+    padding: 0.95rem 1.9rem; border-radius: 6px; text-decoration: none;
+    font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 0.98rem;
+    letter-spacing: 0.02em; transition: background 0.2s, transform 0.15s;
+  }
+  .hero-cta:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .mobile-cta-bar { display: none; }
+  .faq-wrap { max-width: 760px; margin: 0 auto; }
+  .faq-list { margin-top: 2rem; border-top: 1px solid rgba(201,148,58,0.2); }
+  .faq-list details { border-bottom: 1px solid rgba(201,148,58,0.2); }
+  .faq-list summary {
+    cursor: pointer; list-style: none; padding: 1.2rem 0.25rem;
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--white);
+  }
+  .faq-list summary::-webkit-details-marker { display: none; }
+  .faq-list summary .pl {
+    flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%;
+    border: 1px solid var(--gold); color: var(--gold-light);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: 'DM Sans', sans-serif; font-size: 1.2rem; transition: 0.2s;
+  }
+  .faq-list details[open] summary .pl { transform: rotate(45deg); background: var(--gold); color: var(--navy); }
+  .faq-list .ans { padding: 0 0.25rem 1.4rem; color: var(--text-muted); font-size: 0.95rem; line-height: 1.75; max-width: 56ch; }
+  @media (max-width: 768px) {
+    .mobile-cta-bar {
+      display: flex; gap: 0.5rem;
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
+      padding: 0.7rem 0.75rem calc(0.7rem + env(safe-area-inset-bottom, 0px));
+      background: rgba(13, 27, 46, 0.97);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(201, 148, 58, 0.28);
+    }
+    .mobile-cta-bar a {
+      flex: 1; text-align: center; text-decoration: none;
+      padding: 0.9rem 0.4rem; border-radius: 6px;
+      font-family: 'DM Sans', sans-serif; font-weight: 500;
+      font-size: 0.9rem; letter-spacing: 0.02em;
+    }
+    .mcta-primary { background: var(--gold); color: var(--navy); }
+    .mcta-secondary { border: 1px solid rgba(201,148,58,0.5); color: var(--gold-light); }
+    body { padding-bottom: 4.75rem; }
+    .hero { min-height: auto; padding: 5.5rem 4% 2.75rem; }
+    .hero-actions { flex-direction: column; align-items: stretch; gap: 0.9rem; }
+    .hero-cta { text-align: center; }
+    .btn-ghost { text-align: center; }
+    .hero-sub { font-size: 0.95rem; }
+  }
+
   /* CAPTURE */
   .capture { background: var(--navy-light); }
   .capture-inner {
@@ -460,8 +511,9 @@
   <div class="hero-content">
     <div class="hero-eyebrow">Asesora de Seguros de Vida y Jubilación · DeLeanos Financial Corp</div>
     <h1>Protegiendo tu futuro,<br><em>asegurando tu legado.</em></h1>
-    <p class="hero-sub">Como asesora licenciada de DeLeanos Financial Corp, estoy aquí para simplificar el proceso de encontrar el seguro de vida y plan de jubilación adecuado para tu familia — con orientación personalizada en cada paso del camino.</p>
+    <p class="hero-sub">Un seguro de vida que sí puedes entender — con beneficios en vida que puedes usar mientras estás aquí. En inglés o español, con SSN o ITIN.</p>
     <div class="hero-actions">
+      <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="hero-cta">Agenda una llamada gratis →</a>
       <a href="#how" class="btn-ghost">Ver cómo funciona</a>
     </div>
     <div class="hero-trust">
@@ -488,9 +540,7 @@
     <h2 class="reveal" style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.2rem); color:var(--white); line-height:1.3; margin:0.75rem 0 1.75rem;">Aprendí lo que de verdad es un seguro <em style="color:var(--gold-light); font-style:italic;">de la manera difícil.</em></h2>
     <p class="reveal" style="color:var(--text-light); font-size:1rem; font-weight:300; line-height:1.9; margin-bottom:1.25rem;">Cuando mi papá luchaba contra el cáncer, teníamos lo que todos llamarían un &ldquo;buen&rdquo; seguro. Lo que no teníamos era a alguien que se sentara con nosotros y nos guiara sobre qué hacer después. Hicimos las llamadas nosotros mismos. Investigamos nosotros mismos. Tratamos de ser fuertes cuando solo queríamos estar ahí para él.</p>
     <p class="reveal" style="font-family:'Playfair Display',serif; font-size:1.25rem; font-style:italic; color:var(--gold-light); line-height:1.5; border-left:3px solid var(--gold); padding-left:1.25rem; margin:2rem 0;">Me prometí que ninguna familia con la que trabaje se sentiría tan sola.</p>
-    <p class="reveal" style="color:var(--text-light); font-size:1rem; font-weight:300; line-height:1.9; margin-bottom:1.25rem;">Hoy soy agente de seguros licenciada y estratega financiera con DeLeanos Financial Corp aquí en Chicago. También soy mamá, emprendedora y una mujer de fe que cree que la claridad financiera es un acto de amor — para ti, y para quienes cuentan contigo.</p>
-    <p class="reveal" style="color:var(--text-light); font-size:1rem; font-weight:300; line-height:1.9; margin-bottom:1.25rem;">Por eso hago este trabajo en inglés y en español, en las mesas de cocina y en talleres comunitarios gratuitos, sin tecnicismos y sin presión. Una póliza no debería aparecer solo al final. Debería estar contigo, mientras vives.</p>
-    <p class="reveal" style="color:var(--text-light); font-size:1rem; font-weight:300; line-height:1.9; margin-bottom:2rem;">Si esa es la asesora que has estado buscando, te guardé un lugar.</p>
+    <p class="reveal" style="color:var(--text-light); font-size:1rem; font-weight:300; line-height:1.9; margin-bottom:2rem;">Por eso explico la protección en palabras simples — en inglés y en español, sin tecnicismos y sin presión. Porque la claridad financiera es un acto de amor. Si eso es lo que has estado buscando, te guardé un lugar.</p>
     <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="newsletter-btn reveal">Agenda una llamada gratis →</a>
   </div>
 </section>
@@ -665,6 +715,28 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section style="background: var(--navy-mid);">
+  <div class="faq-wrap">
+    <div class="section-label reveal">Buenas preguntas</div>
+    <h2 class="reveal" style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.2rem); color:var(--white); line-height:1.3; margin-top:0.75rem;">Lo que a veces<br><em style="color:var(--gold-light); font-style:italic;">da pena preguntar.</em></h2>
+    <div class="faq-list reveal">
+      <details open>
+        <summary>¿Qué son los beneficios en vida?<span class="pl">+</span></summary>
+        <div class="ans">Cláusulas que te dejan usar tu póliza estando en vida — ante una enfermedad crítica, crónica o terminal. La misma póliza, sin costo extra. Te protege a ti, no solo a los que dejas.</div>
+      </details>
+      <details>
+        <summary>¿Puedo calificar con ITIN?<span class="pl">+</span></summary>
+        <div class="ans">Muchas veces, sí. Muchas familias sin Seguro Social aún califican para cobertura real. Trae tus preguntas a una llamada gratis y lo vemos juntos.</div>
+      </details>
+      <details>
+        <summary>¿Cuánto cuesta?<span class="pl">+</span></summary>
+        <div class="ans">La mayoría lo imagina dos o tres veces más caro. La cobertura real puede empezar más baja de lo que crees — y entre antes empieces, más baja se queda. Buscamos un número que se acomode a tu presupuesto.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- NEWSLETTER -->
 <section class="newsletter" id="newsletter">
   <div class="newsletter-inner">
@@ -776,8 +848,8 @@
     if(!a) return;
     var href = a.getAttribute('href') || '';
     var ev = null, params = {};
-    if(href.indexOf('calendar.app.google/U1FrX6y3fZrXvNGF8') > -1){ ev='book_consultation'; params.method='in_person'; }
-    else if(href.indexOf('calendar.app.google/5qasfgVDb7HBfRBJ8') > -1){ ev='book_consultation'; params.method='virtual'; }
+    if(href.indexOf('calendar.app.google/U1FrX6y3fZrXvNGF8') > -1){ ev='book_consultation_inperson'; }
+    else if(href.indexOf('calendar.app.google/5qasfgVDb7HBfRBJ8') > -1){ ev='book_consultation_virtual'; }
     else if(href.indexOf('beehiiv.com') > -1){ ev='newsletter_subscribe'; }
     else if(href.indexOf('deleanos-workshop') > -1){ ev='workshop_reserve'; }
     else if(href.indexOf('financial-protection-map') > -1 || href.indexOf('mapa-financiero-anapaola') > -1){ ev='explore_map'; }
@@ -789,5 +861,9 @@
     }
   });
 </script>
+<div class="mobile-cta-bar">
+  <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="mcta-primary">📅 Agenda una llamada</a>
+  <a href="tel:+18722252817" class="mcta-secondary">📱 Escríbeme</a>
+</div>
 </body>
 </html>

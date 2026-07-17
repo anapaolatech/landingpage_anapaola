@@ -350,6 +350,57 @@
     .workshop-btn { width: 100%; justify-content: center; }
   }
 
+  /* MOBILE REFRESH: hero CTA, sticky bar, FAQ */
+  .hero-cta {
+    display: inline-block; background: var(--gold); color: var(--navy);
+    padding: 0.95rem 1.9rem; border-radius: 6px; text-decoration: none;
+    font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 0.98rem;
+    letter-spacing: 0.02em; transition: background 0.2s, transform 0.15s;
+  }
+  .hero-cta:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .mobile-cta-bar { display: none; }
+  .faq-wrap { max-width: 760px; margin: 0 auto; }
+  .faq-list { margin-top: 2rem; border-top: 1px solid rgba(201,148,58,0.2); }
+  .faq-list details { border-bottom: 1px solid rgba(201,148,58,0.2); }
+  .faq-list summary {
+    cursor: pointer; list-style: none; padding: 1.2rem 0.25rem;
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--white);
+  }
+  .faq-list summary::-webkit-details-marker { display: none; }
+  .faq-list summary .pl {
+    flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%;
+    border: 1px solid var(--gold); color: var(--gold-light);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: 'DM Sans', sans-serif; font-size: 1.2rem; transition: 0.2s;
+  }
+  .faq-list details[open] summary .pl { transform: rotate(45deg); background: var(--gold); color: var(--navy); }
+  .faq-list .ans { padding: 0 0.25rem 1.4rem; color: var(--text-muted); font-size: 0.95rem; line-height: 1.75; max-width: 56ch; }
+  @media (max-width: 768px) {
+    .mobile-cta-bar {
+      display: flex; gap: 0.5rem;
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
+      padding: 0.7rem 0.75rem calc(0.7rem + env(safe-area-inset-bottom, 0px));
+      background: rgba(13, 27, 46, 0.97);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(201, 148, 58, 0.28);
+    }
+    .mobile-cta-bar a {
+      flex: 1; text-align: center; text-decoration: none;
+      padding: 0.9rem 0.4rem; border-radius: 6px;
+      font-family: 'DM Sans', sans-serif; font-weight: 500;
+      font-size: 0.9rem; letter-spacing: 0.02em;
+    }
+    .mcta-primary { background: var(--gold); color: var(--navy); }
+    .mcta-secondary { border: 1px solid rgba(201,148,58,0.5); color: var(--gold-light); }
+    body { padding-bottom: 4.75rem; }
+    .hero { min-height: auto; padding: 5.5rem 4% 2.75rem; }
+    .hero-actions { flex-direction: column; align-items: stretch; gap: 0.9rem; }
+    .hero-cta { text-align: center; }
+    .btn-ghost { text-align: center; }
+    .hero-sub { font-size: 0.95rem; }
+  }
+
   /* CAPTURE */
   .capture { background: var(--navy-light); }
   .capture-inner {
@@ -460,8 +511,9 @@
   <div class="hero-content">
     <div class="hero-eyebrow">Life Insurance &amp; Retirement Advisor · DeLeanos Financial Corp</div>
     <h1>Protecting your future,<br><em>securing your legacy.</em></h1>
-    <p class="hero-sub">As a licensed advisor with DeLeanos Financial Corp, I'm here to simplify the process of finding the right life insurance and retirement plan for your family — with personalized guidance every step of the way.</p>
+    <p class="hero-sub">Life insurance you can actually understand — with living benefits you can use while you're still here. In English or Spanish, with an SSN or ITIN.</p>
     <div class="hero-actions">
+      <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="hero-cta">Book a free call →</a>
       <a href="#how" class="btn-ghost">See how it works</a>
     </div>
     <div class="hero-trust">
@@ -488,9 +540,7 @@
     <h2 class="reveal" style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.2rem); color:var(--white); line-height:1.3; margin:0.75rem 0 1.75rem;">I learned what insurance really is <em style="color:var(--gold-light); font-style:italic;">the hard way.</em></h2>
     <p class="reveal" style="color:var(--text-light); font-size:1rem; font-weight:300; line-height:1.9; margin-bottom:1.25rem;">When my dad was fighting cancer, we had what everyone would call &ldquo;good&rdquo; insurance. What we didn't have was someone to sit with us and walk us through what to do next. We made the calls ourselves. We did the research ourselves. We tried to stay strong while we were just trying to be there for him.</p>
     <p class="reveal" style="font-family:'Playfair Display',serif; font-size:1.25rem; font-style:italic; color:var(--gold-light); line-height:1.5; border-left:3px solid var(--gold); padding-left:1.25rem; margin:2rem 0;">I promised myself that no family I work with would ever feel that alone.</p>
-    <p class="reveal" style="color:var(--text-light); font-size:1rem; font-weight:300; line-height:1.9; margin-bottom:1.25rem;">Today I'm a licensed insurance agent and financial strategist with DeLeanos Financial Corp here in Chicago. I'm also a mom, an entrepreneur, and a woman of faith who believes financial clarity is an act of love — for yourself, and for the people counting on you.</p>
-    <p class="reveal" style="color:var(--text-light); font-size:1rem; font-weight:300; line-height:1.9; margin-bottom:1.25rem;">That's why I do this work in English and en Español, at kitchen tables and in free weekly workshops, with no jargon and no pressure. A policy shouldn't just show up at the end. It should show up with you, while you're living.</p>
-    <p class="reveal" style="color:var(--text-light); font-size:1rem; font-weight:300; line-height:1.9; margin-bottom:2rem;">If that's the kind of advisor you've been looking for, I saved you a seat.</p>
+    <p class="reveal" style="color:var(--text-light); font-size:1rem; font-weight:300; line-height:1.9; margin-bottom:2rem;">That's why I explain protection in plain words — in English and en Español, with no jargon and no pressure. Because financial clarity is an act of love. If that's what you've been looking for, I saved you a seat.</p>
     <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="newsletter-btn reveal">Book a free call →</a>
   </div>
 </section>
@@ -665,6 +715,28 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section style="background: var(--navy-mid);">
+  <div class="faq-wrap">
+    <div class="section-label reveal">Good questions</div>
+    <h2 class="reveal" style="font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.2rem); color:var(--white); line-height:1.3; margin-top:0.75rem;">The things people are<br><em style="color:var(--gold-light); font-style:italic;">afraid to ask.</em></h2>
+    <div class="faq-list reveal">
+      <details open>
+        <summary>What are living benefits?<span class="pl">+</span></summary>
+        <div class="ans">Riders that let you use your policy while you're living — if you face a critical, chronic, or terminal illness. Same policy, no extra cost. It protects you, not just the people you leave behind.</div>
+      </details>
+      <details>
+        <summary>Can I qualify with an ITIN?<span class="pl">+</span></summary>
+        <div class="ans">Often, yes. Many families without a Social Security number still qualify for real coverage. Bring your questions to a free call and we'll look at it together.</div>
+      </details>
+      <details>
+        <summary>How much does it cost?<span class="pl">+</span></summary>
+        <div class="ans">Most people guess two to three times too high. Real coverage can start smaller than you'd think — and the sooner you begin, the lower it stays. We'll find a number that fits your budget.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- NEWSLETTER -->
 <section class="newsletter" id="newsletter">
   <div class="newsletter-inner">
@@ -789,5 +861,9 @@
     }
   });
 </script>
+<div class="mobile-cta-bar">
+  <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="mcta-primary">📅 Book a free call</a>
+  <a href="tel:+18722252817" class="mcta-secondary">📱 Text me</a>
+</div>
 </body>
 </html>
