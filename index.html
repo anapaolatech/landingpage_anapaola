@@ -218,7 +218,7 @@
   .step { position: relative; }
   .step-num {
     font-family: 'Playfair Display', serif;
-    font-size: 3.5rem; font-weight: 700; color: rgba(201,148,58,0.12);
+    font-size: 3.5rem; font-weight: 700; color: var(--gold);
     line-height: 1; margin-bottom: 0.75rem;
   }
   .step-title { font-size: 1rem; font-weight: 500; color: var(--white); margin-bottom: 0.5rem; }
@@ -634,13 +634,6 @@
         <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.65;">Certified notary available to authenticate and witness your important documents — added convenience for clients who need it.</p>
       </div>
     </div>
-    <div style="margin-top:2rem; padding:1.25rem 1.5rem; background:rgba(201,148,58,0.06); border:1px solid rgba(201,148,58,0.2); border-radius:8px; display:flex; align-items:center; gap:1rem; flex-wrap:wrap;" class="reveal">
-      <div style="flex:1; min-width:200px;">
-        <div style="font-size:0.8rem; color:var(--gold); font-weight:500; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.3rem;">Serving clients nationally &amp; internationally</div>
-        <div style="font-size:0.875rem; color:var(--text-muted);">Proud member of <a href="https://www.deleanosfinancial.com" target="_blank" style="color:var(--gold-light); text-decoration:none; font-weight:500;">DeLeanos Financial Corp</a> · Downtown Chicago</div>
-      </div>
-      <a href="https://www.deleanosfinancial.com" target="_blank" style="font-size:0.8rem; color:var(--text-muted); text-decoration:none; white-space:nowrap; border:1px solid rgba(201,148,58,0.25); padding:0.4rem 1rem; border-radius:4px;">Visit DeLeanos Financial →</a>
-    </div>
   </div>
 </section>
 
@@ -652,32 +645,38 @@
     <p class="section-sub reveal" style="margin-bottom:2rem;">One policy — six ways it works for you.</p>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem;">
       <div class="reveal" style="background:var(--navy-mid); border:1px solid rgba(201,148,58,0.2); border-radius:10px; padding:1.5rem; border-left:4px solid var(--gold);">
+        <div style="font-size:1.5rem; margin-bottom:0.5rem; line-height:1;">📈</div>
         <h4 style="font-family:'Playfair Display',serif; font-size:1.02rem; color:var(--white); margin:0 0 0.4rem;">Tax-smart growth</h4>
         <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.65; margin:0;">Your cash value grows tax-deferred — and you can access it tax-free through policy loans.</p>
       </div>
       <div class="reveal" style="background:var(--navy-mid); border:1px solid rgba(201,148,58,0.2); border-radius:10px; padding:1.5rem; border-left:4px solid var(--gold);">
+        <div style="font-size:1.5rem; margin-bottom:0.5rem; line-height:1;">🛡️</div>
         <h4 style="font-family:'Playfair Display',serif; font-size:1.02rem; color:var(--white); margin:0 0 0.4rem;">A 0% floor</h4>
         <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.65; margin:0;">When the market drops, your cash value doesn't. It never earns less than 0% in a down year.</p>
       </div>
       <div class="reveal" style="background:var(--navy-mid); border:1px solid rgba(201,148,58,0.2); border-radius:10px; padding:1.5rem; border-left:4px solid var(--gold);">
+        <div style="font-size:1.5rem; margin-bottom:0.5rem; line-height:1;">❤️</div>
         <h4 style="font-family:'Playfair Display',serif; font-size:1.02rem; color:var(--white); margin:0 0 0.4rem;">Living benefits</h4>
         <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.65; margin:0;">Use part of your policy while you're alive if you face a critical, chronic, or terminal illness.</p>
       </div>
       <div class="reveal" style="background:var(--navy-mid); border:1px solid rgba(201,148,58,0.2); border-radius:10px; padding:1.5rem; border-left:4px solid var(--gold);">
+        <div style="font-size:1.5rem; margin-bottom:0.5rem; line-height:1;">👨‍👩‍👧</div>
         <h4 style="font-family:'Playfair Display',serif; font-size:1.02rem; color:var(--white); margin:0 0 0.4rem;">Death benefit</h4>
         <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.65; margin:0;">A benefit that passes to your family income-tax-free when you're gone.</p>
       </div>
       <div class="reveal" style="background:var(--navy-mid); border:1px solid rgba(201,148,58,0.2); border-radius:10px; padding:1.5rem; border-left:4px solid var(--gold);">
+        <div style="font-size:1.5rem; margin-bottom:0.5rem; line-height:1;">🏦</div>
         <h4 style="font-family:'Playfair Display',serif; font-size:1.02rem; color:var(--white); margin:0 0 0.4rem;">Access anytime</h4>
         <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.65; margin:0;">Borrow from your cash value whenever you need — no age limit, no IRS penalty.</p>
       </div>
       <div class="reveal" style="background:var(--navy-mid); border:1px solid rgba(201,148,58,0.2); border-radius:10px; padding:1.5rem; border-left:4px solid var(--gold);">
+        <div style="font-size:1.5rem; margin-bottom:0.5rem; line-height:1;">⏰</div>
         <h4 style="font-family:'Playfair Display',serif; font-size:1.02rem; color:var(--white); margin:0 0 0.4rem;">No RMDs, ever</h4>
         <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.65; margin:0;">No required minimum distributions — you decide when and how much to use.</p>
       </div>
     </div>
     <div class="reveal" style="text-align:center; margin-top:2rem;">
-      <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="newsletter-btn">See it with your numbers →</a>
+      <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="newsletter-btn">Schedule your free consultation today →</a>
       <div style="margin-top:0.9rem;"><a href="https://financial-protection-map.vercel.app" target="_blank" style="color:var(--gold-light); font-size:0.875rem; text-decoration:none;">🗺️ Or explore the interactive map →</a></div>
     </div>
   </div>
@@ -724,6 +723,15 @@
         <h3>Licensed &amp; bilingual</h3>
         <p>I serve clients in both English and Spanish — so you can ask every question, understand every detail, and make decisions with full confidence.</p>
       </div>
+    </div>
+  </div>
+  <div class="why-inner" style="margin-top:2rem;">
+    <div style="margin-top:2rem; padding:1.25rem 1.5rem; background:rgba(201,148,58,0.06); border:1px solid rgba(201,148,58,0.2); border-radius:8px; display:flex; align-items:center; gap:1rem; flex-wrap:wrap;" class="reveal">
+      <div style="flex:1; min-width:200px;">
+        <div style="font-size:0.8rem; color:var(--gold); font-weight:500; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.3rem;">Serving clients nationally &amp; internationally</div>
+        <div style="font-size:0.875rem; color:var(--text-muted);">Proud member of <a href="https://www.deleanosfinancial.com" target="_blank" style="color:var(--gold-light); text-decoration:none; font-weight:500;">DeLeanos Financial Corp</a> · Downtown Chicago</div>
+      </div>
+      <a href="https://www.deleanosfinancial.com" target="_blank" style="font-size:0.8rem; color:var(--text-muted); text-decoration:none; white-space:nowrap; border:1px solid rgba(201,148,58,0.25); padding:0.4rem 1rem; border-radius:4px;">Visit DeLeanos Financial →</a>
     </div>
   </div>
 </section>
@@ -818,7 +826,7 @@
       <div class="reveal" style="background:var(--navy-mid); border:1px solid rgba(201,148,58,0.2); border-radius:10px; padding:1.5rem; display:flex; flex-direction:column;">
         <div class="workshop-eyebrow">Weekly letter</div>
         <h3 style="font-family:'Playfair Display',serif; font-size:1.3rem; color:var(--white); margin:0.4rem 0 0.75rem; line-height:1.3;">The Ana Paola<br><em style="color:var(--gold-light); font-style:italic;">Letter</em></h3>
-        <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.7; margin:0 0 1.25rem; flex:1;">One short, plain-language letter on protecting your family and your money — from my table to yours. Because clarity is an act of love.</p>
+        <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.7; margin:0 0 1.25rem; flex:1;">I publish a weekly newsletter that brings motivation, community, and an insurance insight — every week! I'd love to have you be part of the movement.</p>
         <a href="https://anapaolabiz.beehiiv.com/subscribe" target="_blank" class="workshop-btn">✉ Subscribe free →</a>
       </div>
     </div>
