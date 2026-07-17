@@ -401,6 +401,26 @@
     .hero-sub { font-size: 0.95rem; }
   }
 
+  /* LEAD FORM */
+  .int-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:0.6rem; margin-bottom:1rem; }
+  .int-chip input { position:absolute; opacity:0; pointer-events:none; }
+  .int-chip { position:relative; display:block; cursor:pointer; }
+  .int-chip span {
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.3rem;
+    background:rgba(255,255,255,0.05); border:1px solid rgba(201,148,58,0.25);
+    border-radius:8px; padding:0.9rem 0.5rem; text-align:center;
+    font-size:0.85rem; color:var(--text-light); font-weight:500;
+    transition:all 0.15s; min-height:4.6rem;
+  }
+  .int-chip span em { font-style:normal; font-size:1.25rem; line-height:1; }
+  .int-chip:hover span { border-color:var(--gold); }
+  .int-chip input:checked + span {
+    background:rgba(201,148,58,0.16); border-color:var(--gold);
+    color:var(--gold-light);
+  }
+  .lead-q { font-size:0.85rem; color:var(--text-muted); letter-spacing:0.05em; text-transform:uppercase; margin-bottom:0.75rem; font-weight:500; }
+  .lead-thanks { display:none; background:rgba(201,148,58,0.1); border:1px solid rgba(201,148,58,0.35); border-radius:8px; padding:1.5rem; color:var(--gold-light); font-size:1rem; line-height:1.7; margin-bottom:1rem; }
+
   /* CAPTURE */
   .capture { background: var(--navy-light); }
   .capture-inner {
@@ -795,6 +815,28 @@
     <span class="section-label reveal">Let's talk</span>
     <h2 class="reveal">Ready<br><em>when you are.</em></h2>
     <p class="section-sub reveal">One short, honest conversation — just clarity about your options.</p>
+    <div class="lead-thanks reveal" id="lead-thanks">💛 Got it! I'll personally reach out within 24 hours. — Ana</div>
+    <form class="reveal" action="https://formsubmit.co/anapaolabiz44@gmail.com" method="POST" id="lead-form">
+      <input type="hidden" name="_subject" value="New website lead — anapaolabiz.com">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://www.anapaolabiz.com/?sent=1#contact">
+      <div class="lead-q">What are you interested in?</div>
+      <div class="int-grid">
+        <label class="int-chip"><input type="checkbox" name="Interested in" value="Term Life"><span><em>🛡️</em>Term Life</span></label>
+        <label class="int-chip"><input type="checkbox" name="Interested in" value="Whole Life"><span><em>🏛️</em>Whole Life</span></label>
+        <label class="int-chip"><input type="checkbox" name="Interested in" value="IUL"><span><em>📈</em>IUL</span></label>
+        <label class="int-chip"><input type="checkbox" name="Interested in" value="Final Expense"><span><em>💛</em>Final Expense</span></label>
+        <label class="int-chip"><input type="checkbox" name="Interested in" value="Retirement"><span><em>🏦</em>Retirement</span></label>
+        <label class="int-chip"><input type="checkbox" name="Interested in" value="Not sure yet"><span><em>🤝</em>Not sure yet</span></label>
+      </div>
+      <div class="form-row">
+        <input type="text" name="Name" placeholder="Your name" required />
+        <input type="tel" name="Phone" placeholder="Best phone number" required />
+        <button type="submit" class="btn-primary" style="border:none; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:0.95rem; padding:0.85rem 2rem; border-radius:4px;">Get my options →</button>
+      </div>
+    </form>
+    <p class="form-disclaimer reveal" style="margin-bottom:1.5rem;">Or skip the form:</p>
     <div class="form-row reveal">
       <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="btn-primary" style="text-align:center;">📍 Book a free in-person consultation</a>
       <a href="https://calendar.app.google/5qasfgVDb7HBfRBJ8" target="_blank" class="btn-virtual-outline">📹 Prefer virtual? Book a video call</a>
@@ -864,6 +906,15 @@
       gtag('event', ev, params);
     }
   });
+// Lead form: GA event + thank-you state
+  var lf = document.getElementById('lead-form');
+  if (lf) lf.addEventListener('submit', function(){
+    if (typeof gtag === 'function') gtag('event', 'lead_form_submit', { page_language: document.documentElement.lang });
+  });
+  if (window.location.search.indexOf('sent=1') > -1) {
+    var th = document.getElementById('lead-thanks');
+    if (th) { th.style.display = 'block'; if (lf) lf.style.display = 'none'; }
+  }
 </script>
 <div class="mobile-cta-bar">
   <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="mcta-primary">📅 Book a free call</a>
