@@ -234,7 +234,23 @@
   .social { background: var(--navy-mid); }
   .social-inner { max-width: 1100px; margin: 0 auto; }
   .social-header { margin-bottom: 3.5rem; }
-  .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+  .testi-grid {
+    display: flex; gap: 1.25rem;
+    overflow-x: auto; scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; padding: 0.25rem 0.25rem 1rem;
+  }
+  .testi-grid::-webkit-scrollbar { display: none; }
+  .testi-grid .testi-card { flex: 0 0 85%; max-width: 380px; scroll-snap-align: center; }
+  @media (min-width: 769px) { .testi-grid .testi-card { flex: 0 0 340px; } }
+  .testi-nav { display: flex; gap: 0.6rem; justify-content: flex-end; margin-top: 0.75rem; }
+  .testi-nav button {
+    width: 42px; height: 42px; border-radius: 50%;
+    background: transparent; border: 1px solid rgba(201,148,58,0.45);
+    color: var(--gold-light); font-size: 1.1rem; cursor: pointer;
+    transition: all 0.2s; line-height: 1;
+  }
+  .testi-nav button:hover { background: rgba(201,148,58,0.12); border-color: var(--gold-light); }
   .testi-card {
     background: var(--navy); border: 1px solid rgba(201,148,58,0.15);
     border-radius: 8px; padding: 1.75rem;
@@ -744,6 +760,10 @@
         <div class="testi-author">— Maria</div>
       </div>
     </div>
+    <div class="testi-nav reveal">
+      <button type="button" onclick="testiScroll(-1)" aria-label="Previous">←</button>
+      <button type="button" onclick="testiScroll(1)" aria-label="Next">→</button>
+    </div>
   </div>
 </section>
 
@@ -929,6 +949,14 @@
       logo.insertBefore(av, logo.firstChild);
     }
   })();
+  // Testimonial carousel arrows
+  function testiScroll(dir) {
+    var g = document.querySelector('.testi-grid');
+    if (!g) return;
+    var card = g.querySelector('.testi-card');
+    var step = (card ? card.offsetWidth : 320) + 20;
+    g.scrollBy({ left: dir * step, behavior: 'smooth' });
+  }
 </script>
 <div class="mobile-cta-bar">
   <a href="https://calendar.app.google/U1FrX6y3fZrXvNGF8" target="_blank" class="mcta-primary">📅 Book a free call</a>
